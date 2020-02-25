@@ -1,0 +1,19 @@
+<apex:page controller="TrainerController">
+
+  <!-- Begin Form -->
+  <apex:form>
+    <apex:pageBlock title="Add Trainer" mode="edit">
+      <!-- Fields -->
+      <apex:pageBlockSection columns="1" showHeader="true" title="Insert Trainers">
+        <apex:inputField value="{!trainer.Trainer_Name__c}" required="true" />
+        <apex:inputField value="{!trainer.Trainer_Country__c}" />
+      </apex:pageBlockSection>
+
+      <!-- Button Section -->
+      <apex:pageBlockButtons location="bottom">
+        <apex:commandButton value="Save Trainer" action="{!save}" />
+        <apex:commandButton value="Go to List" action="{!goToTrainerList}" />
+      </apex:pageBlockButtons>
+    </apex:pageBlock>
+  </apex:form>
+ </apex:page>
